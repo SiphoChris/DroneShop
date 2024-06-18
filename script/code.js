@@ -1,3 +1,9 @@
+
+
+
+
+
+
 function displayNav() {
     var x = document.getElementById("nav-bar");
     if (x.className === "nav-bar") {
