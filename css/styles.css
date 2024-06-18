@@ -118,6 +118,15 @@ footer {
   padding: 24px 0;
 }
 
+#cart{
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: var(--accent);
+  color: var(--light-font);
+  border: none;
+}
+
 /* media queries for responsiveness */
 
 @media screen and (max-width: 600px) {
