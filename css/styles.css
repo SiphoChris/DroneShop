@@ -42,10 +42,6 @@ body {
   background-color: var(--accent);
 }
 
-.nav-bar a.active {
-  background-color: var(--accent);
-  color: var(--light-font);
-}
 
 .nav-bar .icon {
   display: none;
