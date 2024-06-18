@@ -144,3 +144,14 @@ body {
       border: 1px solid #ccc;  
     }
   }
+
+  footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--light-font);
+    background-color: var(--dark-primary);
+    padding: 24px 0;
+  }
