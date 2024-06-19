@@ -1,3 +1,12 @@
+function displayNav() {
+  var x = document.getElementById("nav-bar");
+  if (x.className === "nav-bar") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav-bar";
+  }
+}
+
 let wrapper = document.querySelector(".products");
 
 let products = JSON.parse(localStorage.getItem("products"))
@@ -85,6 +94,7 @@ function getProducts() {
                 </div>
                 <div><button id="cart">Add to cart<button></div>
                 </div>`;
+      addToCart(product);
     });
   } catch (e) {
     wrapper.textContent = "Please contact our admin at admin@gmail.com";
@@ -92,14 +102,27 @@ function getProducts() {
 }
 getProducts();
 
-function displayNav() {
-  var x = document.getElementById("nav-bar");
-  if (x.className === "nav-bar") {
-    x.className += " responsive";
-  } else {
-    x.className = "nav-bar";
+let cartBtn = document.querySelectorAll("#cart");
+function addToCart(product) {
+  try {
+    cartBtn.forEach((item) => {
+      item.addEventListener("click", () => console.log(product.id));
+    });
+    let fetchCheckoutItems = localStorage.getItem('checkout')
+
+    if(fetchCheckoutItems){
+      fetchCheckoutItems = JSON.stringify(fetchCheckoutItems)
+    }else{
+      fetchCheckoutItems = []
+    }
+
+    fetchCheckoutItems.push(product)
+    localStorage.setItem('checkout', JSON.stringify(fetchCheckoutItems))
+  } catch (error) {
+    console.error('Error fetching product', error);
   }
 }
+// addToCart()
 
 document.querySelector("[current-year]").textContent =
   new Date().getUTCFullYear();
