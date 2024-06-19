@@ -126,6 +126,12 @@ footer {
   color: var(--light-font);
   border: none;
 }
+#cart:hover{
+ opacity: .8;
+}
+#cart:active{
+  opacity: .5;
+}
 
 .products{
   display: flex;
