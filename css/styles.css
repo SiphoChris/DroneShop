@@ -127,10 +127,31 @@ footer {
   border: none;
 }
 
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20%;
+  margin-top: 36px;
+}
+
+.card{
+  width: 40%;
+  margin-bottom: 24px;
+}
+
 /* media queries for responsiveness */
 
 @media screen and (max-width: 600px) {
   
+  .products{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .card{
+    width: 80%;
+  }
+
   .hero-section h3{
     font-size: 1rem;
   }
