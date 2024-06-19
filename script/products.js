@@ -78,7 +78,7 @@ function getProducts() {
     productsCatalogue.forEach((product) => {
       wrapper.innerHTML += `
                 <div class="card">
-                <img src="${product.productImageUrl}" class="card-img-top" alt="${product.productName}" loading='lazy'>
+                <img src="${product.productImageUrl}" class="card-img-top" alt="${product.productName}" loading='lazy' >
                 <div class="card-body">
                     <h5 class="card-title">${product.productName}</h5>
                     <p class="card-text">${product.productDescription}</p>
