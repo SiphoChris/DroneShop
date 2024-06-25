@@ -1,9 +1,4 @@
 
-
-
-
-
-
 function displayNav() {
     var x = document.getElementById("nav-bar");
     if (x.className === "nav-bar") {
@@ -13,8 +8,6 @@ function displayNav() {
     }
   }
   
-
-
 
 document.querySelector("[current-year]").textContent =
         new Date().getUTCFullYear();
